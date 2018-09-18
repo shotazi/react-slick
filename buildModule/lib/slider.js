@@ -321,6 +321,8 @@ var Slider = (function(_React$Component) {
         { className: className },
         newChildren
       );
+    } else if (settings.arrowsAlwaysVisible) {
+      settings.unslick = false;
     } else if (newChildren.length <= settings.slidesToShow) {
       settings.unslick = true;
     }
