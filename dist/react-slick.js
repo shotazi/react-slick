@@ -398,6 +398,8 @@
                 { className: className },
                 newChildren
               );
+            } else if (settings.arrowsAlwaysVisible) {
+              settings.unslick = false;
             } else if (newChildren.length <= settings.slidesToShow) {
               settings.unslick = true;
             }
@@ -1368,6 +1370,7 @@
                 "currentSlide",
                 "slideCount",
                 "slidesToShow",
+                "slidesToScroll",
                 "prevArrow",
                 "nextArrow"
               ]);
@@ -3603,6 +3606,7 @@
             };
             var customProps = {
               currentSlide: this.props.currentSlide,
+              slidesToShow: this.props.slidesToShow,
               slideCount: this.props.slideCount
             };
             var prevArrow = void 0;
@@ -3664,6 +3668,8 @@
             };
             var customProps = {
               currentSlide: this.props.currentSlide,
+              slidesToShow: this.props.slidesToShow,
+              slidesToScroll: this.props.slidesToScroll,
               slideCount: this.props.slideCount
             };
             var nextArrow = void 0;
